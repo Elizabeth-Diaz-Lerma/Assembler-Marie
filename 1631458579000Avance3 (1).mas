@@ -63,24 +63,24 @@ END_IF,     Load Apuntador / If the condition is not met, load the pointer
                Add A / Add C to  A
 	  Store C / 
         	  Jump For / 
-END_FOR, Load B / Termina el ciclo for y cargamos el B
-        	  Subt A / Resta el valor de A a B 
-	  Store B / Almacenalo en B
-        	 Jump Subrutina1 / Regresamos a la Subrutina1
+END_FOR, Load B / End the cycle for and load the B
+        	  Subt A / Subtract the value of A from B
+	  Store B / 
+        	 Jump Subrutina1 / Back to Subrutina1
 
-PRINT, Load Tamaño_arreglo /Cargamos el tamaño del arreglo  
-          Subt B / Restamos el tamaño de arreglo a B
-          SKIPCOND 800  / Usamos skipcond 800 por si el AC da resultado positivo y si se cumple ejecuta el End_for y salga del ciclo
-          Jump END  / Saltamos al fin
-          LoadI Apuntador / Usamos el valor de Apuntador como la dirección del valor a hacer input
-          Output / Imprimimos el valor del apuntador
-          Load Apuntador / Cargamos el apuntador
-          Add A / Agregamos el valor de A
-          Store Apuntador / Cargamos el 
-           Load B / Cargamos el valor de B
-           Add A / Le sumamos A 
-          Store B / Lo guardamos en B
-          Jump Print / Saltamos a imprimirlo 
+PRINT, Load Tamaño_arreglo /load the size of the array
+          Subt B / subtract the array size from B
+          SKIPCOND 800  / use skipcond 800 in case the AC gives a positive result and if it is fulfilled, it executes the End_for and exits the cycle
+          Jump END  
+          LoadI Apuntador / use the value of Pointer as the address of the value to input
+          Output / print the value of the pointer
+          Load Apuntador / load the pointer
+          Add A / 
+          Store Apuntador / 
+           Load B / 
+           Add A /
+          Store B / 
+          Jump Print / 
 		       
 Subrutina2, Clear / Limpiamos el AC
             Store B / Lo guardamos en B
