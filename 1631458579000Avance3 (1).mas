@@ -82,43 +82,43 @@ PRINT, Load Tamaño_arreglo /load the size of the array
           Store B / 
           Jump Print / 
 		       
-Subrutina2, Clear / Limpiamos el AC
-            Store B / Lo guardamos en B
-            Load RPM /  Cargamos el RPM
-            Add A / Agregamos el valor de A a RPM
-            Store Apuntador / Lo guardamos en el apuntador
+Subrutina2, Clear / Clean AC
+            Store B / 
+            Load RPM / 
+            Add A / Add A to RPM 
+            Store Apuntador / Save the pointer
 
-FOR2, Load Tamaño_arreglo /Cargamos el tamaño del arreglo de datos
-	Subt B / Le restamos B 
-            Skipcond 800 / Usamos skipcond 800 por si el AC da resultado positivo y si se cumple ejecuta el END_FOR2 y salga del ciclo
-            Jump END_FOR2   / Saltamos al fin del ciclo
-            LoadI Apuntador   / Cargamos el apuntador
-            Add Acumulador   / Le agregamos el acumalor a apuntador
-            Store Acumulador   / Lo guardamos en el acumulador
-            Load Apuntador   / Cargamos el apuntador
-           Add A   / Agregamos el valor de A en el apuntador
-           Store Apuntador   / Lo almacenamos en el Apuntador
-            Load B   / Cargamos B
-            Add A   / Agrgamos el valor de A a B
-            Store B   / Almacenamos en B
-            Jump FOR2   / Saltamos al for2
-END_FOR2, Clear   / Limpiamos la memoria 
-	Store B   / Almacenamos B
+FOR2, Load Tamaño_arreglo /load the size of the data array
+	Subt B / Substrac B 
+            Skipcond 800 / skipcond 800 in case the AC gives a positive result and if it is fulfilled, it executes the END_FOR2 and exits the cycle
+            Jump END_FOR2   / 
+            LoadI Apuntador   / load the pointer
+            Add Acumulador   / 
+            Store Acumulador   / 
+            Load Apuntador   / 
+           Add A   / Add A to the pointer
+           Store Apuntador   / 
+            Load B   / 
+            Add A   / 
+            Store B   / 
+            Jump FOR2   / 
+END_FOR2, Clear   / Clean the memory 
+	Store B   / 
 
-LOOP, Load Acumulador   / Cargamos el acumulador
-            Subt Tamaño_arreglo   / Restamos el tamaño del arreglo al acumulador
-            SKIPCOND 800  / Usamos skipcond 800 por si el AC da resultado positivo y si se cumple ejecuta el END_FOR2 y salga del ciclo
-            Jump END_loop / Saltamos al end loop
-            Load Acum / Cargamos el acumulador
-            Subt Tamaño_arreglo / Restamos el tamaño del arreglo al acumulador
-            Store Acum /Almacenamos en el acumulador
-            Load B / Cargamos B
-            Add A / Agregamos A a B
-            Store B / Almacenamos en B
-            Jump LOOP / Birncamos al loop
-END_LOOP,   Load B / Cargamos el valor de B
-            Output / Salida del valor B
-            Jump END_Subrutina2  / Brincamos a la subrutina 2 
+LOOP, Load Acumulador   / charge the accumulator
+            Subt Tamaño_arreglo   / subtract the size of the array from the accumulator
+            SKIPCOND 800  / skipcond 800 in case the AC gives a positive result and if it is fulfilled, it executes the END_FOR2 and exits the cycle
+            Jump END_loop / 
+            Load Acum /
+            Subt Tamaño_arreglo / 
+            Store Acum /
+            Load B / 
+            Add A / 
+            Store B / 
+            Jump LOOP / 
+END_LOOP,   Load B / 
+            Output / 
+            Jump END_Subrutina2  / 
         
 END, 	Halt
 RPM, 	HEX 115 		
